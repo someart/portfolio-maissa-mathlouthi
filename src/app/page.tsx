@@ -1,8 +1,17 @@
+import Header from '@/components/Header'
+import Hero from '@/components/sections/Hero'
+import Skills from '@/components/sections/Skills'
+import Projects from '@/components/sections/Projects'
+import Contact from '@/components/sections/Contact'
+
 export default function Home() {
   return (
-    <div className=" bg-red-900">
-      <h1>Maissa Mathlouthi</h1>
-      <p>Full Stack Developer & Cybersecurity Specialist</p>
-    </div>
-  );
+    <>
+      <Header />
+      <Hero />
+      <Skills />
+      <Projects />
+      <Contact />
+    </>
+  )
 }
