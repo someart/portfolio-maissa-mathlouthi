@@ -37,7 +37,7 @@ export default function Contact() {
               name="name"
               placeholder="Your Name"
               required
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-purple-600"
+              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-pink-600"
             />
           </div>
 
@@ -47,7 +47,7 @@ export default function Contact() {
               name="email"
               placeholder="Your Email"
               required
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-purple-600"
+              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-pink-600"
             />
           </div>
 
@@ -57,13 +57,13 @@ export default function Contact() {
               placeholder="Your Message"
               rows={5}
               required
-              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-purple-600"
+              className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-pink-600"
             />
           </div>
 
           <button
             type="submit"
-            className="w-full px-8 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition"
+            className="w-full px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition"
           >
             Send Message
           </button>

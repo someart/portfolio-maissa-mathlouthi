@@ -19,11 +19,11 @@ export default function Skills() {
             <div key={skill.name} className="bg-gray-800 rounded-lg p-6">
               <div className="flex justify-between mb-2">
                 <span className="text-white font-semibold">{skill.name}</span>
-                <span className="text-purple-400">{skill.level}%</span>
+                <span className="text-pink-400">{skill.level}%</span>
               </div>
               <div className="w-full bg-gray-700 rounded-full h-2">
                 <div 
-                  className="bg-purple-600 h-2 rounded-full transition-all duration-1000"
+                  className="bg-pink-600 h-2 rounded-full transition-all duration-1000"
                   style={{ width: `${skill.level}%` }}
                 />
               </div>
