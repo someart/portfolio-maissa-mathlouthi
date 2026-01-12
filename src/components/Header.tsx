@@ -6,17 +6,17 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 z-50 w-full bg-gray-900/80 backdrop-blur-sm border-b border-gray-800">
+    <header className="fixed top-0 z-50 w-full bg-pink-500/80 backdrop-blur-sm border-b border-gray-800">
       <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
         <a href="#" className="text-xl font-bold text-white">
           Maissa Mathlouthi
         </a>
         
         <div className="hidden md:flex gap-8">
-          <a href="#about" className="text-gray-300 hover:text-white transition">About</a>
-          <a href="#skills" className="text-gray-300 hover:text-white transition">Skills</a>
-          <a href="#projects" className="text-gray-300 hover:text-white transition">Projects</a>
-          <a href="#contact" className="text-gray-300 hover:text-white transition">Contact</a>
+          <a href="#about" className="text-gray-300 hover:text-pink-900 transition">About</a>
+          <a href="#skills" className="text-gray-300 hover:text-pink-900 transition">Skills</a>
+          <a href="#projects" className="text-gray-300 hover:text-pink-900 transition">Projects</a>
+          <a href="#contact" className="text-gray-300 hover:text-pink-900 transition">Contact</a>
         </div>
 
         <button 
