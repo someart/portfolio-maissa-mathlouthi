@@ -11,6 +11,9 @@ export default function Hero() {
         <p className="text-gray-400 max-w-2xl mx-auto mb-12">
           Building secure, scalable applications while protecting digital assets
         </p>
+          <p className="text-gray-400 max-w-2xl mx-auto mb-12">
+         Site still under Developement 
+        </p>
         <div className="flex gap-4 justify-center">
           <a 
             href="#projects" 
