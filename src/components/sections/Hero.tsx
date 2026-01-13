@@ -63,9 +63,9 @@ export default function Hero() {
     >
       <div className="container mx-auto px-4 py-20 text-center relative z-10">
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-          Hi, I am <span className="text-pink-500">Maissa Mathlouthi</span>
+          Hi, I am <span className="text-pink-500 ">Maissa Mathlouthi</span>
         </h1>
-        <div className="text-xl md:text-2xl text-gray-300 mb-8 h-16 flex items-center justify-center">
+        <div className="text-xl md:text-2xl text-white mb-8 h-16 flex items-center justify-center">
           <TypeAnimation
             sequence={[
               'Full Stack Developer',
@@ -79,7 +79,7 @@ export default function Hero() {
             speed={50}
             repeat={Infinity}
             cursor={true}
-            className="text-pink-500 font-semibold"
+            className="text-white font-bold  "
           />
         </div>
         <p className="text-gray-400 max-w-2xl mx-auto mb-6">
