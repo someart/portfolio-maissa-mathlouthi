@@ -17,7 +17,7 @@ declare global {
       NET: (options: any) => any;
     };
   }
-}
+} 
 
 export default function Hero() {
   const vantaRef = useRef<HTMLElement>(null);
