@@ -2,6 +2,14 @@
 
 import { useEffect, useRef } from 'react';
 import { TypeAnimation } from 'react-type-animation';
+import { Github, Linkedin, Instagram, Mail } from "lucide-react"
+
+const socialLinks = [
+  { icon: Github, href: "https://github.com/someart", label: "GitHub" },
+  { icon: Linkedin, href: "https://linkedin.com/in/maissa-mathlouthi", label: "LinkedIn" },
+  { icon: Instagram, href: "https://www.instagram.com/Maissa_mathlouthi", label: "Instagram" },
+  { icon: Mail, href: "mailto:maissamth@gmail.com", label: "Email" },
+]
 
 declare global {
   interface Window {
@@ -102,6 +110,21 @@ export default function Hero() {
             Contact Me
           </a>
         </div>
+        {/* Social Links */}
+          <div className="flex items-center justify-center pt-8 gap-4">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-pink-400 transition-colors p-3 hover:bg-white/5 rounded-lg"
+                aria-label={link.label}
+              >
+                <link.icon className="h-6 w-6" />
+              </a>
+            ))}
+          </div>
       </div>
     </section>
   );
