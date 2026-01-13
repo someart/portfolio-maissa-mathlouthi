@@ -20,7 +20,7 @@ declare global {
 } 
 
 export default function Hero() {
-  const vantaRef = useRef<HTMLElement>(null);
+ {/* const vantaRef = useRef<HTMLElement>(null);
   const vantaEffect = useRef<any>(null);
 
   useEffect(() => {
@@ -62,13 +62,33 @@ export default function Hero() {
         vantaEffect.current.destroy();
       }
     };
-  }, []);
+  }, []); */}
 
   return (
     <section 
-      ref={vantaRef}
-      className="min-h-screen flex items-center justify-center relative"
+     // ref={vantaRef}
+      className="min-h-screen flex items-center justify-center relative relative min-h-screen overflow-hidden bg-slate-950"
     >
+       <div className="absolute inset-0">
+        {/* Gradient mesh background using Tailwind */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-pink-900/20 via-slate-950 to-slate-950" />
+
+        {/* Animated gradient orbs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-pink-600/30 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-pink-500/20 rounded-full blur-3xl animate-pulse [animation-delay:1s]" />
+        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-pink-600/25 rounded-full blur-3xl animate-pulse [animation-delay:0.5s]" />
+
+        {/* Decorative dots using Tailwind positioning */}
+        <div className="absolute top-[10%] left-[15%] w-1.5 h-1.5 bg-pink-400 rounded-full animate-ping" />
+        <div className="absolute top-[20%] left-[45%] w-1 h-1 bg-pink-400 rounded-full animate-ping [animation-delay:0.3s]" />
+        <div className="absolute top-[35%] left-[75%] w-1.5 h-1.5 bg-pink-400 rounded-full animate-ping [animation-delay:0.6s]" />
+        <div className="absolute top-[55%] left-[25%] w-1 h-1 bg-pink-400 rounded-full animate-ping [animation-delay:0.9s]" />
+        <div className="absolute top-[70%] left-[65%] w-1.5 h-1.5 bg-pink-400 rounded-full animate-ping [animation-delay:1.2s]" />
+        <div className="absolute top-[85%] left-[35%] w-1 h-1 bg-pink-400 rounded-full animate-ping [animation-delay:1.5s]" />
+        <div className="absolute top-[15%] left-[85%] w-1 h-1 bg-pink-400 rounded-full animate-ping [animation-delay:1.8s]" />
+        <div className="absolute top-[45%] left-[5%] w-1.5 h-1.5 bg-pink-400 rounded-full animate-ping [animation-delay:2.1s]" />
+      </div>
+
       <div className="container mx-auto px-4 py-20 text-center relative z-10">
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
           Hi, I am <span className="text-pink-500 ">Maissa Mathlouthi</span>
