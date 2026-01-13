@@ -11,7 +11,7 @@ const contactLinks = [
     value: "maissa-mathlouthi",
     href: "https://www.linkedin.com/in/maissa-mathlouthi",
   },
-  { icon: Phone, label: "Phone", value: "+216 534 909 569", href: "tel:+216534909569" },
+  { icon: Phone, label: "Phone", value: "+216 534 909 569", href: "tel:+21653909569" },
 ]
 
 export default function Contact() {
