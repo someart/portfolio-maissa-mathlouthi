@@ -1,26 +1,46 @@
 "use client";
-import emailjs from "emailjs-com";
-import React from "react";
+import React, { useState } from "react";
 
 export default function Contact() {
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+  const [isLoading, setIsLoading] = useState(false);
 
-    emailjs.sendForm(
-      "YOUR_SERVICE_ID",
-      "YOUR_TEMPLATE_ID",
-      e.currentTarget,
-      "YOUR_PUBLIC_KEY"
-    ).then(
-      () => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
         alert("Message sent successfully!");
-        e.currentTarget.reset();
-      },
-      (error) => {
+        setFormData({ name: "", email: "", message: "" });
+      } else {
         alert("Failed to send message");
-        console.error(error);
       }
-    );
+    } catch (error) {
+      console.error('Error:', error);
+      alert("Failed to send message");
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -30,11 +50,13 @@ export default function Contact() {
           Get In Touch
         </h2>
 
-        <form onSubmit={sendEmail} className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <input
               type="text"
               name="name"
+              value={formData.name}
+              onChange={handleChange}
               placeholder="Your Name"
               required
               className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-pink-600"
@@ -45,6 +67,8 @@ export default function Contact() {
             <input
               type="email"
               name="email"
+              value={formData.email}
+              onChange={handleChange}
               placeholder="Your Email"
               required
               className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-pink-600"
@@ -54,6 +78,8 @@ export default function Contact() {
           <div>
             <textarea
               name="message"
+              value={formData.message}
+              onChange={handleChange}
               placeholder="Your Message"
               rows={5}
               required
@@ -63,13 +89,13 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="w-full px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition"
+            disabled={isLoading}
+            className="w-full px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition disabled:opacity-50"
           >
-            Send Message
+            {isLoading ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>
     </section>
   );
 }
- 
