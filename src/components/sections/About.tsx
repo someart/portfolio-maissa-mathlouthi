@@ -1,4 +1,4 @@
-import { Shield, Code, Lock, Globe } from "lucide-react"
+import { Code, Smartphone, Globe, Users } from "lucide-react"
 
 const highlights = [
   {
@@ -7,19 +7,19 @@ const highlights = [
     description: "Building modern web applications with React, Next.js, Node.js, and TypeScript.",
   },
   {
-    icon: Shield,
-    title: "Application Security",
-    description: "Conducting security assessments, penetration testing, and secure code reviews.",
-  },
-  {
-    icon: Lock,
-    title: "Security Architecture",
-    description: "Designing secure systems and implementing defense-in-depth strategies.",
+    icon: Smartphone,
+    title: "Mobile Development",
+    description: "Creating cross-platform mobile apps with React Native and Expo.",
   },
   {
     icon: Globe,
-    title: "Cloud Security",
-    description: "Securing cloud infrastructure on AWS, Azure, and GCP environments.",
+    title: "Multilingual",
+    description: "Fluent in Arabic (Native), English (Professional), and French (Working proficiency).",
+  },
+  {
+    icon: Users,
+    title: "Team Player",
+    description: "Strong communicator experienced in Agile/SCRUM methodologies and collaborative development.",
   },
 ]
 
@@ -32,8 +32,9 @@ export default function About() {
           <div className="space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-white">About Me</h2>
             <p className="text-gray-400 leading-relaxed">
-              With over 8 years of experience spanning web development and cybersecurity, I bridge the gap between
-              building great products and keeping them secure.
+              Master's graduate in Computer Systems and Network Security with a strong foundation in web development.
+              Passionate about designing user-centered digital platforms by combining technical skills, problem-solving
+              abilities, and creativity.
             </p>
           </div>
 
