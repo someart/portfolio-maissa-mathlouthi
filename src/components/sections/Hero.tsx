@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { TypeAnimation } from 'react-type-animation';
 
 // Type declarations for Vanta.js
 declare global {
@@ -67,9 +68,23 @@ export default function Hero() {
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
           Hi, I'm <span className="text-pink-500">Maissa Mathlouthi</span>
         </h1>
-        <p className="text-xl md:text-2xl text-gray-300 mb-8">
-          Full Stack Developer & Cybersecurity Specialist
-        </p>
+        <div className="text-xl md:text-2xl text-gray-300 mb-8 h-16 flex items-center justify-center">
+          <TypeAnimation
+            sequence={[
+              'Full Stack Developer',
+              2000,
+              'Cybersecurity Specialist',
+              2000,
+              'Designer',
+              2000,
+            ]}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+            cursor={true}
+            className="text-pink-500 font-semibold"
+          />
+        </div>
         <p className="text-gray-400 max-w-2xl mx-auto mb-6">
           Building secure, scalable applications while protecting digital assets
         </p>
@@ -77,13 +92,13 @@ export default function Hero() {
           Site still under Development
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
-          <a
+          
             href="#projects"
             className="px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-colors duration-300"
           >
             View Projects
           </a>
-          <a
+          
             href="#contact"
             className="px-8 py-3 border border-pink-600 text-pink-500 hover:bg-pink-600/10 rounded-lg transition-colors duration-300"
           >
