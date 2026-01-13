@@ -89,13 +89,13 @@ export default function Hero() {
           Site still under Development
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
-          
+          <a
             href="#projects"
             className="px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-colors duration-300"
           >
             View Projects
           </a>
-          
+          <a
             href="#contact"
             className="px-8 py-3 border border-pink-600 text-pink-500 hover:bg-pink-600/10 rounded-lg transition-colors duration-300"
           >
