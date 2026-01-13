@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react';
 import { TypeAnimation } from 'react-type-animation';
 
-// Type declarations for Vanta.js
 declare global {
   interface Window {
     VANTA: {
@@ -18,12 +17,10 @@ export default function Hero() {
 
   useEffect(() => {
     if (!vantaEffect.current) {
-      // Load THREE.js
       const threeScript = document.createElement('script');
       threeScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js';
       
       threeScript.onload = () => {
-        // Load Vanta.js NET effect
         const vantaScript = document.createElement('script');
         vantaScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js';
         
@@ -66,7 +63,7 @@ export default function Hero() {
     >
       <div className="container mx-auto px-4 py-20 text-center relative z-10">
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-          Hi, I'm <span className="text-pink-500">Maissa Mathlouthi</span>
+          Hi, I am <span className="text-pink-500">Maissa Mathlouthi</span>
         </h1>
         <div className="text-xl md:text-2xl text-gray-300 mb-8 h-16 flex items-center justify-center">
           <TypeAnimation
