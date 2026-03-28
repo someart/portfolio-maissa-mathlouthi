@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Mail, Github, Linkedin, MapPin, Send, Phone } from "lucide-react"
 
 const contactLinks = [
-  { icon: Mail, label: "Email", value: "maissamth@gmail.com", href: "mailto:maissamth@gmail.com" },
+  { icon: Mail, label: "Email", value: "maiissa.mathlouthi@gmail.com", href: "mailto:maiissa.mathlouthi@gmail.com" },
   { icon: Github, label: "GitHub", value: "@someart", href: "https://github.com/someart" },
   {
     icon: Linkedin,
@@ -87,7 +87,7 @@ export default function Contact() {
               ))}
             </div>
 
-         
+
           </div>
 
           {/* Right side - Contact Form */}
@@ -139,7 +139,7 @@ export default function Contact() {
             </form>
           </div>
         </div>
-        
+
 
         <footer className="mt-16 pt-8 border-t border-gray-800 text-center">
           <p className="text-sm text-gray-500">
