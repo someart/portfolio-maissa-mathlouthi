@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import { Github, Linkedin, Instagram, Mail } from "lucide-react"
+import { Github, Linkedin, Instagram, Mail, Download, Eye } from "lucide-react"
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/someart", label: "GitHub" },
@@ -122,6 +122,23 @@ export default function Hero() {
             className="px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-colors duration-300"
           >
             View Projects
+          </a>
+          <a
+            href="/Maissa_Mathlouthi_CV.pdf"
+            download
+            className="px-8 py-3 bg-pink-600 hover:bg-pink-700 text-white rounded-lg transition-colors duration-300 flex items-center gap-2"
+          >
+            <Download className="h-4 w-4" />
+            Download CV
+          </a>
+          <a
+            href="/Maissa_Mathlouthi_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 border border-pink-600 text-pink-500 hover:bg-pink-600/10 rounded-lg transition-colors duration-300 flex items-center gap-2"
+          >
+            <Eye className="h-4 w-4" />
+            View CV
           </a>
           <a
             href="#contact"
